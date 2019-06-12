@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Strike-List</title>
+</head>
+<body>
+  <div class="container">
+    <div class="main-content">
+    <div class="header">
+      <div class="header-text">
+      <h1>Strike-List</h1>
+      <h3></h3>
+    </div>
+    </div>
+
+
+
+    <div class="list">
+      <div class="date"></div>
+      <table class="items">
+        <tbody>
+
+          <tr>
+            <td><span>Read Book</span></td>
+            <td id="delete" onclick="removeTask(this.parentNode)"><span>X</span></td>
+          </tr>
+
+
+
+        </tbody>
+      </table>
+      <div class="addTaskForm">
+        <div class="visible-addTask">
+          <i class="small material-icons">add</i>
+          <p>Add Task</p>
+        </div>
+
+       <div class="hidden-addTask">
+        <input type="text" class="textarea" placeholder="Enter Task.." >
+      <div class="buttons">
+       <button id="cancel" type="cancel">Cancel</button>
+       <button id="submit" type="submit">Add Task</button>
+      </div>
+      </div>
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
