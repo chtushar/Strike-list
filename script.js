@@ -30,7 +30,7 @@ function enterTask(){
 
 
   tbody.innerHTML += `<tr>
-  <td><span>${newTask}</span></td>
+  <td><span class="unstrike" onclick="toggleStrike(this)">${newTask}</span></td>
   <td class="delete" onclick="removeTask(this.parentNode)"><span>X</span></td>
 </tr>
 `
@@ -42,6 +42,18 @@ textBox.style.visibility = 'hidden';
 
 function removeTask(el){
   el.remove();
+}
+
+function toggleStrike(e){
+  if(e.classList.contains("unstrike")){
+    e.classList.remove("unstrike");
+    e.classList.add("strike");
+  }
+  else{
+    e.classList.remove("strike");
+    e.classList.add("unstrike");
+  }
+
 }
 /*Calling Function*/
 addTask.addEventListener('click',forAddButton);
@@ -63,16 +75,3 @@ newTask.addEventListener('keyup',(e)=>{
 
 
 
-// var nameNode = document.querySelector('.name');
-// var text = document.querySelector('.name').textContent;
-// nameNode.addEventListener('click',()=>{
-
-// if(nameNode.classList.contains('strike') === false){
-// var result = name.strike();
-// nameNode.classList.add('strike');
-// nameNode.innerHTML = result;}
-// else{
-// nameNode.classList.remove('strike');
-// nameNode.innerHTML = text;}
-
-// });
