@@ -37,6 +37,7 @@ function enterTask(){
 textBox.style.visibility = 'hidden';
   addTask.classList.remove('animate-visibleAddTask');
   icon_addtask.classList.remove('animate-plus-sign');
+  document.querySelector('.textarea').value = '';
   id++;
 }
 
