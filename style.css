@@ -84,7 +84,7 @@ tbody tr td span {
   padding-left: 15px;
 }
 .textarea:focus,
-button:focus {
+button:focus, .addTaskForm:focus, .hidden-addTask:focus {
     outline: none;
 }
 
