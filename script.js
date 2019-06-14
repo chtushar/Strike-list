@@ -9,6 +9,29 @@ var tbody = document.querySelector('tbody');
 var newTask = document.querySelector('.textarea');
 var deleteButton = document.querySelector('.delete');
 var id = 0;
+
+
+
+
+
+
+
+/*Get Day*/
+var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+
+console.log();
+
+
+
+
+
+
 /*Function*/
 function forCancel(){
   textBox.style.visibility = 'hidden';
