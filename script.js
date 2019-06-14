@@ -23,10 +23,11 @@ var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
 
-today = mm + '/' + dd + '/' + yyyy;
+today = dd + '/' + mm + '/' + yyyy;
 
-console.log();
+var header_options =document.querySelector('.header-options');
 
+header_options.innerHTML += `<h3 class="date">${today}</h3>`;
 
 
 
